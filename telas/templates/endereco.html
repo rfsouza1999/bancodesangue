@@ -89,18 +89,18 @@
 </head>
 <body>
     <div class="container">
-        <form action= "{% url'/endereco/' %}" method="post">
+        <form action= "/endereco/" method="post">
             {% csrf_token %}
         <h1>BANCO DE SANGUE</h1>
-        <input name='cep' type="text" class="input-field" placeholder="CEP">
-        <input name='rua' type="text" class="input-field" placeholder="RUA">
-        <input name='numero' type="text" class="input-field" placeholder="NUMERO">
-        <input name='bairro' type="text" class="input-field" placeholder="BAIRRO">
-        <input name='cidade' type="text" class="input-field" placeholder="CIDADE">
-        <input name='estado' type="text" class="input-field" placeholder="ESTADO">
-        <input name='pais' type="text" class="input-field" placeholder="PAIS">
-        <input name='observacao' type="text" class="input-field" placeholder="OBSERVAÇÃO">
-        <button class="button">SALVAR</button>
+        <input name='Endereco_Cep' type="text" class="input-field" placeholder="CEP">
+        <input name='Endereco_Rua' type="text" class="input-field" placeholder="RUA">
+        <input name='Endereco_Numero' type="text" class="input-field" placeholder="NUMERO">
+        <input name='Endereco_Bairro' type="text" class="input-field" placeholder="BAIRRO">
+        <input name='Endereco_Cidade' type="text" class="input-field" placeholder="CIDADE">
+        <input name='Endereco_Estado' type="text" class="input-field" placeholder="ESTADO">
+        <input name='Endereco_Pais' type="text" class="input-field" placeholder="PAIS">
+        <input name='Endereco_Obs' type="text" class="input-field" placeholder="OBSERVAÇÃO">
+        <button class="button" onclick="window.open('', '_self', ''); window.close();" >SALVAR</button>
         <p class="signature">~By Rafael</p>
         </forma>
     </div>

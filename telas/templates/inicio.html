@@ -60,12 +60,15 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <form action= "{% url'/inicio/' %}" method="post">
-            {% csrf_token %}
+    <div class="container">   
         <h1>BANCO DE SANGUE</h1>
-        <button class="button">PRECISO DE DOAÇÃO</button>
-        <button class="button">QUERO DOAR</button>
+        <form action= "/inicio/" method="get">
+            {% csrf_token %}
+        <button onclick="location.href='/dados_pessoa/'" class="button">PRECISO DE DOAÇÃO</button>
+        </form>
+        <form action= "/inicio/" method="post">
+            {% csrf_token %}
+        <button onclick="location.href='/dados_pessoa2/'" class="button">QUERO DOAR</button>
         <p class="signature">~By Rafael</p>
         </form>
     </div>

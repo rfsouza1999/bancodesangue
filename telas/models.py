@@ -46,10 +46,10 @@ class Pessoa(models.Model): ## FEITO
     Pessoa_Altura = models.CharField(max_length=5)
     Pessoa_TipoSanguineo = models.CharField(max_length=3, null=False)
     Pessoa_Sexo = models.CharField(max_length=1)
-    Pessoa_DataNascimento = models.DateField(null=False)
-    Pessoa_Endereco = models.ManyToManyField(Endereco, blank=True)
-    Pessoa_Checkup = models.ManyToManyField(Checkup, blank=True)
-    Pessoa_Doacoes = models.ManyToManyField(Doacao, blank=True)
+    Pessoa_DataNascimento = models.CharField(null=False, max_length=15)
+    Pessoa_Endereco = models.ManyToManyField(Endereco, blank=False)
+    Pessoa_Checkup = models.ManyToManyField(Checkup, blank=False)
+    Pessoa_Doacoes = models.ManyToManyField(Doacao, blank=False)
     
 class Compartilhamento(models.Model): ## FEITO
     Compartilhamento_Id = models.AutoField(auto_created=True,primary_key=True)

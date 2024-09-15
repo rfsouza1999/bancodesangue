@@ -53,8 +53,8 @@
         }
 
         .input-field.address { /* Estilo especial para o campo ENDEREÇO */
-            background-color: #e0a0a0;
-            cursor: pointer; 
+            background-color: #e0a0a0; /* Cor de fundo mais escura */
+            cursor: pointer; /* Aponta que o campo é clicável */
         }
 
         .input-field.address:hover { /* Efeito ao passar o mouse sobre o campo ENDEREÇO */
@@ -86,14 +86,24 @@
         }
 
     </style>
-    
 </head>
 <body>
     <div class="container">
-        <form action="/lista_doacao/" method="post">
-            {% csrf_token %}
         <h1>BANCO DE SANGUE</h1>
-        <input type="button" class="input-field" value="NOME 1" onclick="redirectToPage('/lista_doacao/')">
+        <form action= "/dados_pessoa2/" method="post">
+            {% csrf_token %}
+        <input name='Pessoa_Nome' type="text" class="input-field" placeholder="NOME">
+        <input name='Pessoa_Cpf' type="text" class="input-field" placeholder="CPF">
+        <input name='Pessoa_Telefone1' type="text" class="input-field" placeholder="TELEFONE PRINCIPAL">
+        <input name='Pessoa_Telefone2' type="text" class="input-field" placeholder="TELEFONE SECUNDÁRIO">
+        <input name='Pessoa_Peso' type="text" class="input-field" placeholder="PESO">
+        <input name='Pessoa_Altura' type="text" class="input-field" placeholder="ALTURA">
+        <input name='Pessoa_TipoSanguineo' type="text" class="input-field" placeholder="TIPO SANGUÍNEO">
+        <input name='Pessoa_Sexo' type="text" class="input-field" placeholder="SEXO">
+        <input name='Pessoa_Doacoes' type="text" class="input-field" placeholder="É DOADOR? SIM/NÃO">
+        <input name='Pessoa_DataNascimento' type="text" class="input-field" placeholder="NASCIMENTO">
+        <input name='Pessoa_Endereco' type="text" class="input-field address" onclick="window.open('/endereco/','_blank').href='/endereco/'" placeholder="ENDEREÇO" autocomplete="false" >
+        <button class="button">SALVAR</button>
         <p class="signature">~By Rafael</p>
         </form>
     </div>

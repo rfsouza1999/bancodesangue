@@ -90,19 +90,19 @@
 <body>
     <div class="container">
         <h1>BANCO DE SANGUE</h1>
-        <form action="{% url '/dados_pessoa' %}" method="post">
+        <form action= "/dados_pessoa/" method="post">
             {% csrf_token %}
-        <input name='nome' type="text" class="input-field" placeholder="NOME">
-        <input name='cpf' type="text" class="input-field" placeholder="CPF">
-        <input name='telefone1' type="text" class="input-field" placeholder="TELEFONE PRINCIPAL">
-        <input name='telefone2' type="text" class="input-field" placeholder="TELEFONE SECUNDÁRIO">
-        <input name='peso' type="text" class="input-field" placeholder="PESO">
-        <input name='altura' type="text" class="input-field" placeholder="ALTURA">
-        <input name='tipo' type="text" class="input-field" placeholder="TIPO SANGUÍNEO">
-        <input name='sexo' type="text" class="input-field" placeholder="SEXO">
-        <input name='doador' type="text" class="input-field" placeholder="É DOADOR? SIM/NÃO">
-        <input name='nascimento' type="text" class="input-field" placeholder="NASCIMENTO">
-        <input name='endereco' type="text" class="input-field address" onclick="window.location.href='/endereco/'" placeholder="ENDEREÇO">
+        <input name='Pessoa_Nome' type="text" class="input-field" placeholder="NOME">
+        <input name='Pessoa_Cpf' type="text" class="input-field" placeholder="CPF">
+        <input name='Pessoa_Telefone1' type="text" class="input-field" placeholder="TELEFONE PRINCIPAL">
+        <input name='Pessoa_Telefone2' type="text" class="input-field" placeholder="TELEFONE SECUNDÁRIO">
+        <input name='Pessoa_Peso' type="text" class="input-field" placeholder="PESO">
+        <input name='Pessoa_Altura' type="text" class="input-field" placeholder="ALTURA">
+        <input name='Pessoa_TipoSanguineo' type="text" class="input-field" placeholder="TIPO SANGUÍNEO">
+        <input name='Pessoa_Sexo' type="text" class="input-field" placeholder="SEXO">
+        <input name='Pessoa_Doacoes' type="text" class="input-field" placeholder="É DOADOR? SIM/NÃO">
+        <input name='Pessoa_DataNascimento' type="text" class="input-field" placeholder="NASCIMENTO">
+        <input name='Pessoa_Endereco' type="text" class="input-field address" onclick="window.open('/endereco/','_blank').href='/endereco/'" placeholder="ENDEREÇO" autocomplete="false" >
         <button class="button">SALVAR</button>
         <p class="signature">~By Rafael</p>
         </form>
