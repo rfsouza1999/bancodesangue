@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Sangue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <style>
+        body { /* Controla o corpo */
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #330000;
+        }
+
+        .container { /* Controla a caixa */           
+            width: 320px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h1 { /* Título da página */
+            font-family: 'Italianno', cursive;
+            font-size: 36px;
+            color: #8B0000;
+            margin-bottom: 40px;
+        }
+
+        .input-field { /* Configura as caixas de entrada de texto */
+            display: block;
+            width: 90%; 
+            padding: 10px;
+            margin: 10px auto; 
+            background-color: #f2dede;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #000;
+            text-align: left;
+        }
+
+        .input-field::placeholder { /* Configura o texto de espaço reservado */
+            color: #000;
+            opacity: 0.5;
+        }
+
+        .input-field.address { /* Estilo especial para o campo ENDEREÇO */
+            background-color: #e0a0a0; /* Cor de fundo mais escura */
+            cursor: pointer; /* Aponta que o campo é clicável */
+        }
+
+        .input-field.address:hover { /* Efeito ao passar o mouse sobre o campo ENDEREÇO */
+            background-color: #d08080;
+        }
+
+        .button { /* Controla o botão de salvar */
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto; 
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+        }
+
+        .button:hover { /* Controla o botão ao passar o mouse por cima dele */
+            background-color: #ff3333;
+        }
+
+        .signature { /* Configura o By Rafael */
+            font-family: 'Italianno', cursive;
+            font-size: 22px;
+            color: #8B0000;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action= "{% url'/endereco/' %}" method="post">
+            {% csrf_token %}
+        <h1>BANCO DE SANGUE</h1>
+        <input name='cep' type="text" class="input-field" placeholder="CEP">
+        <input name='rua' type="text" class="input-field" placeholder="RUA">
+        <input name='numero' type="text" class="input-field" placeholder="NUMERO">
+        <input name='bairro' type="text" class="input-field" placeholder="BAIRRO">
+        <input name='cidade' type="text" class="input-field" placeholder="CIDADE">
+        <input name='estado' type="text" class="input-field" placeholder="ESTADO">
+        <input name='pais' type="text" class="input-field" placeholder="PAIS">
+        <input name='observacao' type="text" class="input-field" placeholder="OBSERVAÇÃO">
+        <button class="button">SALVAR</button>
+        <p class="signature">~By Rafael</p>
+        </forma>
+    </div>
+</body>
+</html>

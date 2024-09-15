@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Sangue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <style>
+        body { /* corpo da pagina */
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #330000;
+        }
+
+        .container { /* elemenentos internos */
+            width: 320px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        h1 { /* titulo da pagina */
+            font-family: 'Italianno', cursive;
+            font-size: 36px;
+            color: #8B0000;
+            margin-bottom: 40px;
+        }
+
+        .input-field { /* config. usuario e senha */
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto; 
+            background-color: #f2dede;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #000;
+            text-align: left; 
+        }
+
+        .input-field::placeholder { /* Config. dos textos de placeholder */
+            color: #000;
+            opacity: 0.5;
+        }
+
+        .forgot-password { /* para o esqueceu a senha */
+            text-align: right;
+            font-size: 12px;
+            color: #555;
+            display: block;
+            margin-top: -10px;
+            text-align: center;
+        }
+
+        .button { /* Entrar e criar conta */
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+        }
+
+        .button:hover { /* Quando passar o mouse sobre os botões */
+            background-color: #ff1a1a;
+        }
+
+        .separator { /* Config. do "OU" entre entrar e criar conta */
+            margin: 20px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .signature { /* Configura o By Rafael */
+            font-family: 'Italianno', cursive;
+            font-size: 22px;
+            color: #8B0000;
+            margin-top: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        {% include "partials/alert.html" %}
+        <form action="/" method="post">
+            {% csrf_token %}
+        <h1>BANCO DE SANGUE</h1>
+        <input name='usuario' class="input-field" type="text" id="username" name="username" placeholder="usuario">
+        <input name='senha' class="input-field" type="password" id="password" name="password" placeholder="senha">
+        <a href="#" class="forgot-password">esqueceu a senha?</a>
+        <button class="button">entrar</button>
+        <div class="separator">ou</div>
+        <button class="button" onclick="goToCreateAccount()">criar conta</button>
+        <p class="signature">~By Rafael</p>
+        </form>
+    </div>
+</body>
+</html>
